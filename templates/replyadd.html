@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div id="editor" class="form box">
+  <div class="info">
+  </div>
+  <form id="new_post" class="new_post" method="post" action="/reply/{{ pid }}/add">
+    <div class="control-group">
+      <p>
+        <label for="post_title">Name</label>
+        <input type="text" id="post_title" name="reply[name]" size="60">
+      </p>
+    </div>
+    <div class="control-group">
+        <p>
+        <label for="post_title">Email</label>
+        <input type="text" id="post_title" name="reply[email]" size="60">
+      </p>
+    </div>
+    <div class="control-group">
+        <p>
+        <label for="post_title">Website</label>
+        <input type="text" id="post_title" name="reply[website]" size="60">
+      </p>
+    </div>
+    <div class="control-group">
+      <p>
+        <label for="post_title">Content</label>
+        <textarea id="editor-input" name="reply[content]" rows="25" cols="65"></textarea>
+      </p>
+      
+    </div>
+    <div class="control-group">
+    
+      <button id="submit" class="btn" type="submit">提交</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
